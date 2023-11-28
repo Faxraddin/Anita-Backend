@@ -19,8 +19,7 @@ const DB = process.env.DB;
 const PORT = 8080;
 
 mongoose.connect(DB,{
-    useNewUrlParser:true,
-    useUnifiedTopology: true,
+
 })
 .then(()=>console.log("MongoDB Connection Succeeded."))
 .catch((err) => console.log("Error in DB connection: " + err));
