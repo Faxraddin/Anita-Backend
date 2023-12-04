@@ -65,10 +65,26 @@ const sendEmail = async (email,message,name,company,number ) => {
   
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: ' info@anitaimpex.com ',
-      subject: 'Client message',
-      text: `email:${email}     Hi! My name is ${message},my phone number is ${name},and i'm from ${company} company.   ${number}`,
+      to: 'info@anitaimpex.com',
+      subject: 'Client Inquiry',
+      text: `
+        Dear Team,
+    
+        My name is ${message}, and I represent ${company}. I am reaching out to you with regards to a potential business inquiry. Please find below my contact details:
+    
+        - Email: ${email}
+        - Phone Number: ${name}
+    
+        Message:
+        ${number}
+    
+        Looking forward to discussing further and exploring potential collaboration opportunities.
+    
+        Best Regards,
+        ${message}
+      `,
     };
+    
   
     await transporter.sendMail(mailOptions);
   } catch (error) {
