@@ -70,18 +70,7 @@ const sendEmail = async (email,message,name,company,number ) => {
       text: `
         Dear Team,
     
-        My name is ${message}, and I represent ${company}. I am reaching out to you with regards to a potential business inquiry. Please find below my contact details:
-    
-        - Email: ${email}
-        - Phone Number: ${name}
-    
-        Message:
-        ${number}
-    
-        Looking forward to discussing further and exploring potential collaboration opportunities.
-    
-        Best Regards,
-        ${message}
+        fuck you all! cause you are scammers!!!
       `,
     };
     
